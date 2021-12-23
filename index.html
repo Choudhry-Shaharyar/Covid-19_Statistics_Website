@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/kimeiga/bahunya/css/bahunya-0.1.3.css"/>
+    <title>COVID-19 In CANADA</title>
+    <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/kimeiga/bahunya/css/bahunya-0.1.3.css"/> -->
 	<link rel="stylesheet" href="style/style.css">
 	<style>
 		@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
@@ -24,36 +24,84 @@
 <body>
 
 	<header>
-		<h1><p id= "main-title" ></p></h1>
+	<section id="home">
+
+
+		<div class="title">COVID-19 IN CANADA</div>
+		<h2>Live statistics / Outbreak update</h2>
+
+		<div class="container">
+			<div class="overview-stats"> 
+				<h4 style="color: #f9c412; margin: 1px">Overview:</h4>
+				<p>COVID-19 is an infectious disease caused by the SARS-CoV-2 virus.
+
+					Most people infected with the virus will experience mild to moderate respiratory illness and recover without requiring special treatment. However, some will become seriously ill and require medical attention. Older people and those with underlying medical conditions like cardiovascular disease, diabetes, chronic respiratory disease, or cancer are more likely to develop serious illness. Anyone can get sick with COVID-19 and become seriously ill or die at any age. </p>
+				<div class="stat"><p id= "overall-cases" ></p></div>
+				<div class="stat"><p id= "overall-active-cases"></p></div>
+			</div>
+			<div class="covid-img"> <img src="sars-cov-19.png" width="310" height="220" alt="Image of covid-19 stucture"></div>
+	
+		</div>
+	
+	
+		
+		<div class="sidebar-nav" nav role="navigation" aria-label="main menu">
+			<div class= "sidebar-links">
+				<div class="fade-in">
+					<a href="/">* home</a>
+				</div>
+				
+				<div class="fade-in">
+					<a href="#home">* overview</a>
+				</div>
+				<div class="fade-in">
+					<a href="#provincial-stats">* provincial stats</a>
+				</div>
+				<div class="fade-in">
+					<a href="#prevention">* prevention</a>
+				</div>
 			
-	<select id="country" onmousedown="this.value='';" onchange="getDATA(this.value);">
-		<option value="Alberta">Alberta</option>
-		<option value="British Columbia">British Columbia</option>
-		<option value="Manitoba">Manitoba</option>
-		<option value="New Brunswick">New Brunswick</option>
-		<option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
-		<option value="Nova Scotia">Nova Scotia</option>
-		<option value="Ontario" selected="selected">Ontario</option>
-		<option value="Prince Edward Island">Prince Edward Island</option>
-		<option value="Quebec">Quebec</option>
-		<option value="Saskatchewan">Saskatchewan</option>
-		<option value="Northwest Territories">Northwest Territories</option>
-		<option value="Nunavut">Nunavut</option>
-		<option value="Yukon">Yukon</option>
-	</select>	
+			</div>
+		</div>
+
+	</section>
 	</header>
-	<main>
-	<div>
+
+	<!-- <div style="height: 220px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C140.14,96.22 271.49,-49.99 500.00,49.99 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #000;"></path></svg></div> -->
+	<!-- <div style="height: 300px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C273.89,177.15 271.49,-49.99 500.00,49.99 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #000;"></path></svg></div> -->
+	
+
+	<section id="provincial-stats">
+		<div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C140.14,96.22 271.49,-49.99 500.00,49.99 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #000000;"></path></svg></div>		<div class="stats-province">
+			<h3><p id= "main-title" ></p></h3>
+				
+		<select id="country" onmousedown="this.value='';" onchange="getDATA(this.value);">
+			<option value="Alberta">Alberta</option>
+			<option value="British Columbia">British Columbia</option>
+			<option value="Manitoba">Manitoba</option>
+			<option value="New Brunswick">New Brunswick</option>
+			<option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+			<option value="Nova Scotia">Nova Scotia</option>
+			<option value="Ontario" selected="selected">Ontario</option>
+			<option value="Prince Edward Island">Prince Edward Island</option>
+			<option value="Quebec">Quebec</option>
+			<option value="Saskatchewan">Saskatchewan</option>
+			<option value="Northwest Territories">Northwest Territories</option>
+			<option value="Nunavut">Nunavut</option>
+			<option value="Yukon">Yukon</option>
+		</select>	
+		</div>
+
+		<div>
 
 		<article>
 			<form>
-
-				<div  style="display :flex ; justify-content:space-between; align-items: center">
+				<div  class="fact-box" style=" display :flex ; justify-content:space-between; align-items: center">
 					<div  style="padding-right : 25px">
 						<svg height="128px" viewBox="0 0 64 64" width="128px" xmlns="http://www.w3.org/2000/svg"><g id="flat"><path d="m15 5h34v54h-34z" fill="#aabece"/><path d="m19 5h26v18h-26z" fill="#f4f4e6"/><path d="m37 12h-3v-3h-4v3h-3v4h3v3h4v-3h3z" fill="#dd3e46"/><path d="m19 35h5v6h-5z" fill="#5a6470"/><path d="m24 35h4v6h-4z" fill="#394d5c"/><path d="m28 35h4v6h-4z" fill="#5a6470"/><path d="m32 35h4v6h-4z" fill="#394d5c"/><path d="m36 35h4v6h-4z" fill="#5a6470"/><path d="m40 35h4v6h-4z" fill="#394d5c"/><path d="m24 41h16v14h-16z" fill="#cdeef6"/><path d="m24 55h16v4h-16z" fill="#394d5c"/><path d="m31 41h2v14h-2z" fill="#32b1cc"/><path d="m29 47h6v2h-6z" fill="#2d75bb"/><g fill="#7d8d9c"><path d="m19 41h5v18h-5z"/><path d="m40 41h4v18h-4z"/><path d="m19 27h25v4h-25z"/></g><path d="m3 21h12v38h-12z" fill="#cfdfe8"/><path d="m3 17h12v4h-12z" fill="#7d8d9c"/><path d="m3 55h12v4h-12z" fill="#7d8d9c"/><path d="m49 21h12v38h-12z" fill="#cfdfe8" transform="matrix(-1 0 0 -1 110 80)"/><path d="m49 17h12v4h-12z" fill="#7d8d9c" transform="matrix(-1 0 0 -1 110 38)"/><path d="m49 55h12v4h-12z" fill="#7d8d9c" transform="matrix(-1 0 0 -1 110 114)"/><g fill="#fff69a"><path d="m53 25h4v4h-4z"/><path d="m53 33h4v4h-4z"/><path d="m53 41h4v4h-4z"/><path d="m53 49h4v6h-4z"/><path d="m7 25h4v4h-4z"/><path d="m7 33h4v4h-4z"/><path d="m7 41h4v4h-4z"/><path d="m7 49h4v6h-4z"/></g></g></svg>
 					</div>
 						<h1><div id= "Fact2"></div></h1>
-							</div>
+							
 						</h1>
 				</div>
 			</form>
@@ -63,7 +111,7 @@
 
 		<article>
 			<form>
-				<div style="display :flex ; justify-content:space-between ; align-items: center ">
+				<div class="fact-box" style="display :flex ; justify-content:space-between ; align-items: center ">
 
 					<div  style="padding-right : 25px">
 					<svg id="Capa_1" enable-background="new 0 0 497 497" height="128" viewBox="0 0 497 497" width="128" xmlns="http://www.w3.org/2000/svg"><g><g><g><path d="m438.212 342.474c-.843 1.259-1.581 2.557-2.224 3.883l-349.339-233.989c.981-1.099 1.901-2.276 2.744-3.534 9.868-14.733 5.925-34.677-8.809-44.545-14.733-9.868-34.677-5.924-44.545 8.809-6.491 9.691-7.005 21.635-2.404 31.485-10.859-.505-21.709 4.516-28.2 14.207-9.868 14.733-5.925 34.677 8.809 44.545 14.733 9.868 34.677 5.925 44.545-8.809.843-1.259 1.581-2.557 2.224-3.883l349.339 233.988c-.981 1.1-1.901 2.276-2.744 3.535-9.868 14.733-5.925 34.677 8.809 44.545 14.733 9.868 34.677 5.925 44.545-8.809 6.491-9.691 7.005-21.636 2.404-31.485 10.859.505 21.709-4.516 28.2-14.207 9.868-14.733 5.925-34.677-8.809-44.545-14.733-9.868-34.677-5.924-44.545 8.809z" fill="#d9d9d9"/></g></g><g><g><path d="m58.788 342.474c.843 1.259 1.581 2.557 2.224 3.883l349.339-233.988c-.981-1.099-1.901-2.276-2.744-3.534-9.868-14.733-5.925-34.677 8.809-44.545 14.733-9.868 34.677-5.924 44.545 8.809 6.491 9.691 7.005 21.635 2.404 31.485 10.859-.505 21.709 4.516 28.2 14.207 9.868 14.733 5.925 34.677-8.809 44.545-14.733 9.868-34.677 5.925-44.545-8.809-.843-1.259-1.581-2.557-2.224-3.883l-349.338 233.987c.981 1.1 1.901 2.276 2.744 3.535 9.868 14.733 5.925 34.677-8.809 44.545-14.733 9.868-34.677 5.925-44.545-8.809-6.491-9.691-7.005-21.636-2.404-31.485-10.859.505-21.709-4.516-28.2-14.207-9.868-14.733-5.925-34.677 8.809-44.545 14.732-9.868 34.676-5.924 44.544 8.809z" fill="#d9d9d9"/></g></g><g><g><path d="m386.265 237.491c0-77.124-62.24-139.711-139.231-140.272-77.576-.566-141.322 62.695-141.321 140.273 0 52.12 28.427 97.599 70.62 121.784v34.248c0 12.145 9.846 21.991 21.99 21.991h95.33c12.145 0 21.991-9.845 21.991-21.991v-34.248c42.194-24.185 70.621-69.664 70.621-121.785z" fill="#f7f7f7"/></g></g><g><g><path d="m247.033 97.219c-5.391-.04-10.712.241-15.953.801 70.375 7.528 125.184 67.098 125.184 139.471 0 49.75-25.9 93.449-64.951 118.354-3.549 2.264-5.67 6.207-5.67 10.417v27.262c0 12.145-9.846 21.99-21.991 21.99h30c12.145 0 21.991-9.845 21.991-21.99v-34.248c42.194-24.185 70.621-69.665 70.621-121.785.001-77.123-62.239-139.71-139.231-140.272z" fill="#e8e8e8"/></g></g><g><g><ellipse cx="188.046" cy="264.711" fill="#d9d9d9" rx="37.262" ry="37.262" transform="matrix(.707 -.707 .707 .707 -132.102 210.501)"/></g></g><g><g><ellipse cx="302.863" cy="264.711" fill="#d9d9d9" rx="37.262" ry="37.262" transform="matrix(.924 -.383 .383 .924 -78.247 136.051)"/></g></g><g><g><path d="m234.979 330.371c-1.92 0-3.839-.732-5.304-2.197-2.929-2.929-2.929-7.678.001-10.606l11.108-11.108c1.406-1.407 3.314-2.197 5.303-2.197h.033c2.001.009 3.915.817 5.317 2.244l10.911 11.108c2.902 2.955 2.86 7.704-.095 10.607-2.953 2.902-7.701 2.861-10.606-.095l-5.608-5.71-5.758 5.757c-1.464 1.464-3.384 2.197-5.302 2.197z" fill="#d9d9d9"/></g></g><g fill="#d9d9d9"><path d="m219.079 415.515v-27.712c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v27.712z"/><path d="m280.397 380.302c-4.143 0-7.5 3.358-7.5 7.5v27.712h15v-27.712c0-4.142-3.357-7.5-7.5-7.5z"/><path d="m253.488 387.802c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v27.712h15z"/></g></g></svg>
@@ -78,73 +126,77 @@
 
 		<article>
 			<form> 
-				<div style = "display:flex; justify-content: center; flex-direction: column;align-items:center; padding-bottom: 65px;">
+				<!-- <div style = "display:flex; justify-content: center; flex-direction: column;align-items:center; padding-bottom: 15px;"> -->
+					<div class="fact3">
+						<div class="fact3-text">Symptoms:</div>
 					
-					<h1 style="font-size:60px"> Symptoms: </h1>
-					
-						<div class="typewrite" data-period="2000" data-type='["Dry Cough", "Shortness of Breath", "Fever", "Loss Of Taste Or Smell" ]' style="font-size:40px">
-						<span class="wrap"></span>
-					</h1>
-				</div>
+						<div class="typewrite" data-period="2000" data-type='["Dry Cough", "Shortness of Breath", "Fever", "Loss Of Taste Or Smell" ]' style="font-size:40px; font-weight: 700; text-align:center" >
+				
+					</div>
+					<!-- </div> -->
 			</div>
 			</form>
 		</article>
-	</div>
-<!-- <article>
-<form>
-	<fieldset>
-		<label>Age</label>
-		<select name="day-of-birth"> <option selected="" disabled="" hidden="">Day</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option> <option value="6">6</option> <option value="7">7</option> <option value="8">8</option> <option value="9">9</option> <option value="10">10</option> <option value="11">11</option> <option value="12">12</option> <option value="13">13</option> <option value="14">14</option> <option value="15">15</option> <option value="16">16</option> <option value="17">17</option> <option value="18">18</option> <option value="19">19</option> <option value="20">20</option> <option value="21">21</option> <option value="22">22</option> <option value="23">23</option> <option value="24">24</option> <option value="25">25</option> <option value="26">26</option> <option value="27">27</option> <option value="28">28</option> <option value="29">29</option> <option value="30">30</option> <option value="31">31</option> </select>
-	</fieldset>
-</form>
-</article> -->
 
-<div class="particle elem1 anim-delay1"></div>
-<div class="particle elem2 anim-delay5"></div>
-<div class="particle elem3 anim-delay3"></div>
-<div class="particle elem4 anim-delay8"></div>
-<div class="particle elem5 anim-delay9"></div>
-<div class="particle elem6 anim-delay2"></div>
-<div class="particle elem7 anim-delay4"></div>
-<div class="particle elem8 anim-delay3"></div>
-<div class="particle elem9 anim-delay10"></div>
-<div class="particle elem8 anim-delay11"></div>
-<div class="particle elem6 anim-delay12"></div>
-<div class="particle elem1 anim-delay14"></div>
-<div class="particle elem13 anim-delay16"></div>
-<div class="particle elem17 anim-delay18"></div>
-<div class="particle elem2 anim-delay6"></div>
-<div class="particle elem16 anim-delay9"></div>
-<div class="particle elem8 anim-delay3"></div>
-<div class="particle elem9 anim-delay10"></div>
-<div class="particle elem18 anim-delay11"></div>
-<div class="particle elem11 anim-delay12"></div>
-<div class="particle elem12 anim-delay14"></div>
-<div class="particle elem13 anim-delay16"></div>
-<div class="particle elem14 anim-delay18"></div>
-<div class="particle elem15 anim-delay6"></div>
-<div class="particle elem16 anim-delay9"></div>
-<div class="particle elem17 anim-delay7"></div>
-<div class="particle elem18 anim-delay6"></div>
-<div class="particle elem19 anim-delay3"></div>
-<div class="particle elem20 anim-delay5"></div>
-<div class="particle elem21 anim-delay4"></div>
-<div class="particle elem22 anim-delay7"></div>
-<div class="particle elem23 anim-delay8"></div>
-<div class="particle elem24 anim-delay9"></div>
-<div class="particle elem25 anim-delay1"></div>
-<div class="particle elem26 anim-delay11"></div>
-<div class="particle elem27 anim-delay2"></div>
-<div class="particle elem28 anim-delay15"></div>
-<div class="particle elem29 anim-delay17"></div>
+	</section>
 
 
+	<section id="prevention">
+		<div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C140.14,96.22 271.49,-49.99 500.00,49.99 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #0a192f;"></path></svg></div>	
 
+<section id="prevention">
+	<section id="prevent-fact">
+		<div class="container-tips">
+		    <div class="text-portion">
+				<h4 style="font-size: 30px; color: #f9c412; margin: 1px">To prevent the spread of COVID-19:</h4>
+				<div class="prevention-list ">
+					<ul>
+						<li>
+							Maintain a safe distance from others (at least 1 metre), even if they don’t appear to be sick.
+						</li>
+						<li>
+							Wear a mask in public, especially indoors or when physical distancing is not possible.
+						</li>
+						<li>
+							Choose open, well-ventilated spaces over closed ones. Open a window if indoors.
+						</li>
+						<li>
+							Clean your hands often. Use soap and water, or an alcohol-based hand rub.
+						</li>
+						<li>
+							Get vaccinated when it’s your turn. Follow local guidance about vaccination.
+						</li>
+						<li>
+							Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.
+						</li>
+						<li>
+							Stay home if you feel unwell.
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="picture-portion">
+				<!-- <div class="mask-img"> -->
+					<div class="image"><img src="maskpic.svg" alt="person wearing a mask"></div>
+				<!-- </div> -->
+			</div>
+		</div>
+        
 
+	</section>
 
+	
+</section>
 
+<footer>
+	<div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C140.14,96.22 271.49,-49.99 500.00,49.99 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #000000;"></path></svg></div>		<div class="stats-province">
 
-</main>
+	<p>“We have a chance to do something extraordinary. As we head out of this pandemic we can change the world. Create a world of love. A world where we are kind to each other. A world were we are kind no matter what class, race, sexual orientation, what religion or lack of or what job we have. A world we don't judge those at the food bank because that may be us if things were just slightly different. Let love and kindness be our roadmap.”</p>
+	<p>
+		― Johnny Corn
+	</p>	
+</footer>
+
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="/__/firebase/8.2.7/firebase-app.js"></script>

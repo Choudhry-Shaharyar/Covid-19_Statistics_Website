@@ -1,8 +1,8 @@
 var document = window.document;
 
 
-// const api_url = 'https://api.covid19tracker.ca/summary';
 const api_url = 'https://api.apify.com/v2/key-value-stores/fabbocwKrtxSDf96h/records/LATEST?disableRedirect=true';
+
 var province = 'Ontario';
 
 // Total cases Canada
@@ -12,10 +12,9 @@ async function getDATA(country_selected) {
     const response = await fetch(api_url);
     const data = await response.json();
 
-    
+
   
     result = typeof country_selected !== 'undefined' ? country_selected : 'Ontario';
-
     var regionIndexMap = new Map();
     regionIndexMap.set("Newfoundland and Labrador", [1, 520998]);
     regionIndexMap.set("Prince Edward Island", [2, 159713]);
@@ -35,8 +34,8 @@ async function getDATA(country_selected) {
 
     var infected = data.infectedByRegion[regionIndexMap.get(result)[0]]["infectedCount"];
     var deaths = data.infectedByRegion[regionIndexMap.get(result)[0]]["deceasedCount"];
-   
-
+    var resultOfInfected = data.infected;
+    var resultOfDeceased = data.deceased;
     console.log(deaths);
     console.log(regionIndexMap.get(result)[1]);
     
@@ -44,7 +43,9 @@ async function getDATA(country_selected) {
     var rounded = percent.toFixed(2)
 
     
-    document.getElementById('main-title').innerHTML = `You have a <a>${rounded}%</a> chance of getting COVID when going out in <a>${result}</a>`;
+    // 
+
+    document.getElementById('main-title').innerHTML = `You have a <a>${rounded}%</a> chance of getting COVID-19 when going out in <a>${result}</a>`;
 
 
     document.getElementById('Fact2').innerHTML = `As of now <a>${infected}</a> people have gotten COVID-19 in ` + result;
@@ -53,7 +54,8 @@ async function getDATA(country_selected) {
     } else {
         document.getElementById('Fact3').innerHTML = `<a>${deaths}</a> people have already died in ` + result;
     }
-    
+    document.getElementById('overall-cases').innerHTML = `Infected up to date: <a>${resultOfInfected}</a>`;
+    document.getElementById('overall-active-cases').innerHTML = `Deceased up to date: <a>${resultOfDeceased}</a>`;
 
    //  const {infected} = data;
    //  document.getElementById('main title').textContent = `There have been a total of ${infected} cases in Canada`;
