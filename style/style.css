@@ -24,7 +24,7 @@ h2{
     border-bottom: 0.5px solid #ccc;
 }
 h4{
-    padding-top: 30px;
+    padding-top: 60px;
 }
 /*  */
 #main-title{
@@ -54,7 +54,7 @@ font-size: large;
 }
 
 .picture-portion img{
-    margin-top: 90px;
+    margin-top: 135px;
     height: 200px;
     /* margin-left: 80px; */
 }
@@ -94,7 +94,7 @@ article {
 .covid-img{
 box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 padding-right: 5px;
-margin-top: 7%;
+margin-top: 12%;
 }
 
 
