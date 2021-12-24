@@ -45,7 +45,7 @@ async function getDATA(country_selected) {
     
     // 
 
-    document.getElementById('main-title').innerHTML = `You have a <a>${rounded}%</a> chance of getting COVID-19 when going out in <a>${result}</a>`;
+    document.getElementById('main-title').innerHTML = `In total, <a>${rounded}%</a> of the population of <a>${result}</a> has had COVID-19`;
 
 
     document.getElementById('Fact2').innerHTML = `As of now <a>${infected}</a> people have gotten COVID-19 in ` + result;
